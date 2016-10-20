@@ -461,7 +461,7 @@ function openerp_pos_models(instance, module){ //module is instance.point_of_sal
                 price:              this.get_unit_price(),
                 discount:           this.get_discount(),
                 product_name:       this.get_product().get('name'),
-                price_display :     this.get_display_price(),
+                price_display :     this.get_price_with_tax(),
                 price_with_tax :    this.get_price_with_tax(),
                 price_without_tax:  this.get_price_without_tax(),
                 tax:                this.get_tax(),
