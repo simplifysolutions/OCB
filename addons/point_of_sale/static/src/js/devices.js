@@ -261,7 +261,7 @@ function openerp_pos_devices(instance,module){ //module is instance.point_of_sal
             this.action_callback_stack = [];
 
             this.weight_prefix_set   = attributes.weight_prefix_set   ||  {'21':''};
-            this.discount_prefix_set = attributes.discount_prefix_set ||  {'22':''};
+            this.discount_prefix_set = attributes.discount_prefix_set ||  {'041':''};
             this.price_prefix_set    = attributes.price_prefix_set    ||  {'23':''};
             this.cashier_prefix_set  = attributes.cashier_prefix_set  ||  {'041':''};
             this.client_prefix_set   = attributes.client_prefix_set   ||  {'042':''};
