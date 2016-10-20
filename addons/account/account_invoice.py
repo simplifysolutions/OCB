@@ -576,7 +576,7 @@ class account_invoice(osv.osv):
             ids = [ids]
         if not date_invoice:
             date_invoice = fields.date.context_today(self, cr, uid)
-        if not payment_term_id:
+        if not payment_term_id and len(ids):
             inv = self.browse(cr, uid, ids[0])
             #To make sure the invoice due date should contain due date which is entered by user when there is no payment term defined
             return {'value':{'date_due': inv.date_due and inv.date_due or date_invoice}}
