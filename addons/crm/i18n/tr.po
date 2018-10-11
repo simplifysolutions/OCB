@@ -3,7 +3,7 @@
 # * crm
 # 
 # Translators:
-# Martin Trigaux <mat@odoo.com>, 2016
+# Martin Trigaux, 2016
 # Murat Kaplan <muratk@projetgrup.com>, 2016
 # Ediz Duman <neps1192@gmail.com>, 2016
 # UNIBRAVO SOFTWARE <unibravo@gmail.com>, 2016
@@ -14,18 +14,21 @@
 # ilyas kurt <ilyaskrt19@gmail.com>, 2016
 # Esin Kandemir <esaykandemir@gmail.com>, 2016
 # alisan alacam <alisanalacam@gmail.com>, 2016
+# Güven YILMAZ <guvenyilmaz@outlook.com.tr>, 2016
 # Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2016
 # Ayhan KIZILTAN <akiziltan76@hotmail.com>, 2016
 # tanerhasret <tanerhasret@gmail.com>, 2016
 # cagri erarslan <cagri.erarslan@mechsoft.com.tr>, 2016
 # Fırat Kaya <firat.kaya@mechsoft.com.tr>, 2016
+# Emre Akayoğlu <emre.akayoglu@mechsoft.com.tr>, 2016
+# Umur Akın <umura@projetgrup.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-10 08:42+0000\n"
-"PO-Revision-Date: 2016-10-10 08:42+0000\n"
-"Last-Translator: Fırat Kaya <firat.kaya@mechsoft.com.tr>, 2016\n"
+"POT-Creation-Date: 2017-06-23 13:26+0000\n"
+"PO-Revision-Date: 2017-06-23 13:26+0000\n"
+"Last-Translator: Umur Akın <umura@projetgrup.com>, 2018\n"
 "Language-Team: Turkish (https://www.transifex.com/odoo/teams/41243/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,11 +119,10 @@ msgid ""
 "                                <span style=\"font-style:italic;\">You’re not alone</span>\n"
 "                            </p>\n"
 "                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span>We would be delighted to assist you along the way. Contact us at\n"
-"                                <a href=\"mailto:help@odoo.com\"><span style=\"text-decoration:underline;\">\n"
-"                                help@odoo.com</span></a> if you have any question. You can also discover\n"
-"                                how to get the best out of Odoo CRM with our </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation/user/9.0/crm.html\">\n"
+"                                <span>We would be delighted to assist you along the way. Contact us through our\n"
+"                                <a href=\"https://www.odoo.com/help\">support form</a> if you have any question.\n"
+"                                You can also discover how to get the best out of Odoo CRM with our </span>\n"
+"                                <a href=\"https://www.odoo.com/documentation/user/10.0/crm.html\">\n"
 "                                <span style=\"text-decoration:underline;\">User Documentation</span></a>\n"
 "                                </span><span> or with our </span>\n"
 "                                <a href=\"https://www.odoo.com/documentation\">\n"
@@ -137,105 +139,6 @@ msgid ""
 "            </div>\n"
 "        </div>"
 msgstr ""
-"\n"
-"\n"
-"            <div style=\"margin: 10px auto;\">\n"
-"            % set last_created_team = user.env['crm.team'].search([], order=\"create_date desc\")[0]\n"
-"            <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:100%;\">\n"
-"                <tbody>\n"
-"                    <tr>\n"
-"                        <td style=\"padding:2px;width:30%;\">\n"
-"                            <img src=\"web/static/src/img/logo.png\"/>\n"
-"                        </td>\n"
-"                        <td style=\"vertical-align: top; padding: 8px 10px;text-align: left;font-size: 14px;\">\n"
-"                            <a href=\"web/login\" style=\"float:right ;margin:15px auto;background: #875A7B;border-radius: 5px;color: #ffffff;font-size: 16px;padding: 10px 20px 10px 20px;text-decoration: none;\">Otomatik Giriş</a>\n"
-"                        </td>\n"
-"                    </tr>\n"
-"                </tbody>\n"
-"            </table>\n"
-"            <table style=\"width:100%;text-align:justify;margin:0 auto;border-collapse:collapse;border-top:1px solid lightgray\"\">\n"
-"                <tbody>\n"
-"                    <tr>\n"
-"                        <td style=\"padding:15px 10px;font-size:20px\">\n"
-"                            <p style=\"color:#875A7B;margin:0\" >Hooray!</p><br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:15px;margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                <span>Odoo CRM uygulaması çalışıyor.</span></p><br>\n"
-"                            <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span style=\"font-size:13px;font-weight:bold; \">Sırada ne var?</span></p>\n"
-"                            <ul style=\"margin-top:0pt;margin-bottom:0pt;font-size:13px;list-style-type:disc;\">\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>Aday oluşturmak için şu adresi kullanbilirsiniz: </span>\n"
-"                                        <a href=\"mailto:${last_created_team.alias_id.name_get()[0][1] if last_created_team.alias_id.alias_domain else user.company_id.email}\">\n"
-"                                            <span style=\"font-weight:bold; text-decoration:underline;\">${last_created_team.alias_id.name_get()[0][1] if last_created_team.alias_id.alias_domain else user.company_id.email}</span>\n"
-"                                        </a>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                        <span>Satış sürecindeki fırsatlarınızı takip etmek için fırsat kartlarını bir kolondan diğere kolona sürekle bırak yöntemi ile taşıyabilirsiniz</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                            </ul> <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span style=\"font-weight:bold;\">Keşfedin: </span>\n"
-"                                <span><a href=\"/web#view_type=list&model=crm.lead&action=crm.crm_lead_all_leads\">\n"
-"                                    <span style=\"font-weight:bold; text-decoration:underline;\">CRM planlayıcı ile</span></a></span>\n"
-"                                <span> ek özellikler elde edin.</span>\n"
-"                                <span style=\"color:#875A7B;margin:0;font-weight:bold\">(${user.env['web.planner'].get_planner_progress('planner_crm')}% done)</span>\n"
-"                            </p>\n"
-"                            <ul style=\"margin-top:0pt;margin-bottom:0pt;font-size:13px;list-style-type:disc;\">\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>Aday puanlama ile adaylarınızı ilgili satış personellerine otomatik olarak görevlendirin, </span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>Verimli eposta kampanyaları ile potansiyel müşteriniz ile iletişimde kalın,</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>Anketlerden yüksek kalitede bilgiler elde edin,</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:0pt;\">\n"
-"                                        <span>Akıllı raporlama ve doğru panolar elde edin,</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                                <li dir=\"ltr\">\n"
-"                                    <p dir=\"ltr\" style=\"margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                        <span>ve daha fazlası...</span>\n"
-"                                    </p>\n"
-"                                </li>\n"
-"                            </ul>\n"
-"                            <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;line-height:1.3;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span style=\"font-weight:bold;\">Yardıma mı ihtiyacınız var?</span>\n"
-"                                <span style=\"font-style:italic;\">Yalnız değilsiniz.</span>\n"
-"                            </p>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span>Size yardımcı olmaktan memnuniyet duyarız. İletişim adresimiz:\n"
-"                                <a href=\"mailto:help@odoo.com\"><span style=\"text-decoration:underline;\">\n"
-"                                help@odoo.com</span></a> Ayrıca, dokümantasyonumuz üzerinden Odoo CRM ile ilgili daha detaylı bilgi alabilirsiniz: </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation/user/9.0/crm.html\">\n"
-"                                <span style=\"text-decoration:underline;\">Kullanıcı Dokümantasyonu</span></a>\n"
-"                                </span><span> or with our </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation\">\n"
-"                                <span style=\"text-decoration:underline;\">API Dokümantasyonu</span></a>\n"
-"                            </p>\n"
-"                            <br>\n"
-"                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\"><span>Odoo tecrübesinden zevk alın,</span></p>\n"
-"                        </td>\n"
-"                    </tr>\n"
-"                </tbody>\n"
-"            </table>\n"
-"            <div dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;color:grey\">\n"
-"                <span><br/>-- <br/>Odoo Ekibi<br/>PS: Kullanıcılar Odoo'yu seviyor, kontrol edebilirsiniz </span><a href=\"https://twitter.com/odoo/favorites\"><span style=\"text-decoration:underline;\">Bakalım, kullanıcılar neler diyor?</span></a></span>\n"
-"            </div>\n"
-"        </div>"
 
 #. module: crm
 #: model:mail.template,body_html:crm.email_template_opportunity_reminder_mail
@@ -482,7 +385,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "<span class=\"oe_grey\"> at </span>"
-msgstr "<span class=\"oe_grey\"> Saatinde</span>"
+msgstr "<span class=\"oe_grey\"> /</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -564,7 +467,7 @@ msgid ""
 msgstr ""
 "<span class=\"panel-title\">\n"
 "                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
-"                                        <strong>Üyelikler</strong><br/>\n"
+"                                        <strong>Abonelikler</strong><br/>\n"
 "                                        <span class=\"small\"/>\n"
 "                                    </span>"
 
@@ -666,7 +569,7 @@ msgid ""
 "                                    <span>(Salesperson)</span>"
 msgstr ""
 "<span class=\"panel-title\"><span data-icon=\"&#57438;\"/><strong> Örnek 3</strong></span>\n"
-"                                    <span>(Satışçı)</span>"
+"                                    <span>(Satış Personeli:)</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -722,7 +625,7 @@ msgstr "<strong>Örnek: Pazarlık aşaması</strong>"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Example: Qualified stage</strong>"
-msgstr "<strong>Örnek: İş Çıkabilir aşaması</strong>"
+msgstr "<strong>Örnek: Değerlendirme aşaması</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -732,10 +635,10 @@ msgid ""
 "                                        Group Y Axis: Expected Closing Date\n"
 "                                        Filter: Won Opportunities"
 msgstr ""
-"<strong>Örnek: </strong>Satışların ortalama gerçekleşme süresini analiz edin.\n"
+"<strong>Örnek: </strong>Satışların olumlu kapatılma ortalama süresini analiz edin.\n"
 "                                        X Ekseni: Oluşturulma Tarihi\n"
-"                                        Y Ekseni: Tahmini Gerçekleşme Tarihi\n"
-"                                        Filtre: Satışa Dönmüş Fırsatlar"
+"                                        Y Ekseni: Tahmini Kapanma Tarihi\n"
+"                                        Filtre: Kazanılmış Fırsatlar"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -816,7 +719,7 @@ msgstr "<strong>Teklifler:</strong>"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Qualified:</strong>"
-msgstr "<strong>İş Çıkabilir:</strong>"
+msgstr "<strong>Değerlendirme:</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -884,7 +787,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Subscriptions</strong>"
-msgstr "<strong>Üyelikler</strong>"
+msgstr "<strong>Abonelikler</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1384,7 +1287,7 @@ msgstr "Tarih seçiniz..."
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 msgid "City"
-msgstr "Mahalle"
+msgstr "Semt/İlçe"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_tag_ids
@@ -1451,7 +1354,18 @@ msgstr "Kapat"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_date_closed
 msgid "Close Date"
-msgstr "kapanış tarihi"
+msgstr "Kapanış Tarihi"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:30
+#, python-format
+msgid ""
+"Close opportunity if: \"pre-sales days * $500\" < \"expected revenue\" * "
+"probability"
+msgstr ""
+"Fırsat kapalıysa: \"satış öncesi günler * 500 $\" <\"beklenen gelir\" * "
+"olasılık"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_date_closed
@@ -1516,6 +1430,11 @@ msgstr "Fiyat listelerinizi ayarlayın"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Congratulations, you're done!"
 msgstr "Tebrikler, bitirdiniz."
+
+#. module: crm
+#: model:crm.lead.tag,name:crm.categ_oppor7
+msgid "Consulting"
+msgstr "Danışma"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1632,6 +1551,13 @@ msgstr "Fırsat Oluştur"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Create Vendors"
 msgstr "Satıcı Oluştur"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:31
+#, python-format
+msgid "Create a Proof of Concept with consultants"
+msgstr "Danışmanlarla bir Görüş Provası oluşturun"
 
 #. module: crm
 #: selection:crm.lead2opportunity.partner,action:0
@@ -1754,7 +1680,7 @@ msgid "Current Line"
 msgstr "Geçerli Satır"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:1073
+#: code:addons/crm/models/crm_lead.py:1069
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_mass_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead2opportunity_partner_partner_id
 #: model:ir.model.fields,field_description:crm.field_crm_lead2projectissue_wizard_partner_id
@@ -1848,6 +1774,13 @@ msgid "Delete"
 msgstr "Sil"
 
 #. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#, python-format
+msgid "Demonstration"
+msgstr "Arz"
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "Depending on how complex your business is, it may take between 6 months and 18 months for a new\n"
@@ -1880,6 +1813,11 @@ msgid ""
 msgstr ""
 "Bu alt tip için gönderilen mesaja eklenecek açıklama. Geçersizse, yerine adı"
 " eklenecektir."
+
+#. module: crm
+#: model:crm.lead.tag,name:crm.categ_oppor5
+msgid "Design"
+msgstr "Tasarım"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2045,7 +1983,7 @@ msgid ""
 "Every salesperson can analyze their own pipe by clicking on the 'switch view"
 " to graph' icon."
 msgstr ""
-"Her satış personeli kendi akışını 'Grafik görünümüne geç' tuşuna basarak "
+"Her satış personeli kendi kanalını 'Grafik görünümüne geç' tuşuna basarak "
 "görüntüleyebilir."
 
 #. module: crm
@@ -2104,7 +2042,7 @@ msgstr "Tahmini Kapatma Tarihi"
 #: model:ir.model.fields,field_description:crm.field_crm_activity_log_planned_revenue
 #: model:ir.model.fields,field_description:crm.field_crm_lead_planned_revenue
 msgid "Expected Revenue"
-msgstr "Umulan Gelir"
+msgstr "Beklenen Gelir"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_tree_view_oppor
@@ -2152,9 +2090,16 @@ msgstr ""
 "getattr(related_document.relation_field) hesaplamak için kullanılır."
 
 #. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:32
+#, python-format
+msgid "Final Proposal sent"
+msgstr "Son Teklif gönderildi"
+
+#. module: crm
 #: selection:base.partner.merge.automatic.wizard,state:0
 msgid "Finished"
-msgstr "Biten"
+msgstr "Tamamlandı"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_stage_fold
@@ -2211,6 +2156,13 @@ msgstr "Atamaya Zorla"
 #, python-format
 msgid "From %s : %s"
 msgstr "%s den: %s"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:31
+#, python-format
+msgid "GAP analysis with customer"
+msgstr "Müşteri ile GAP analizi"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2418,7 +2370,7 @@ msgstr "Eğer bunu kendiniz yapmak isterseniz:"
 #. module: crm
 #: model:ir.ui.menu,name:crm.menu_import_crm
 msgid "Import & Synchronize"
-msgstr "İçe Aktarım ve Senkronizasyon"
+msgstr "İçe Aktar ve Senkronize Et"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2444,6 +2396,18 @@ msgstr "Arşivlenenleri dahil et"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Incoming Emails"
 msgstr "Gelen Epostalar"
+
+#. module: crm
+#: model:crm.lead.tag,name:crm.categ_oppor4
+msgid "Information"
+msgstr "Bilgi"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:23
+#, python-format
+msgid "Initial Contact"
+msgstr "İlk Temas"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_sale_config_settings_module_crm_voip
@@ -2550,7 +2514,7 @@ msgid "Last Updated on"
 msgstr "Son Güncelleme"
 
 #. module: crm
-#: code:addons/crm/models/crm_lead.py:841
+#: code:addons/crm/models/crm_lead.py:837
 #: selection:crm.activity.report,lead_type:0 selection:crm.lead,type:0
 #: selection:crm.opportunity.report,type:0
 #: model:ir.model.fields,field_description:crm.field_crm_activity_log_lead_id
@@ -2769,7 +2733,9 @@ msgid "Log an Activity"
 msgstr "Aktivite Oluştur"
 
 #. module: crm
+#. openerp-web
 #: code:addons/crm/models/crm_lead.py:1044
+#: code:addons/crm/static/src/js/web_planner_crm.js:34
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
@@ -2847,6 +2813,13 @@ msgstr "Medya"
 #, python-format
 msgid "Meeting scheduled at '%s'<br> Subject: %s <br> Duration: %s hour(s)"
 msgstr "Toplantı planlama saati '%s'<br> Konu: %s <br> Süre: %s saat"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:25
+#, python-format
+msgid "Meeting with a demo. Set Fields: expected revenue, closing date"
+msgstr "Bir demo ile buluşma. Alanları Ayarla: beklenen gelir, kapanış tarihi"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.act_crm_opportunity_calendar_event_new
@@ -3051,7 +3024,27 @@ msgid "Name"
 msgstr "Adı"
 
 #. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#, python-format
+msgid "Needs assessment"
+msgstr "İhtiyaç analizi"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:16
+#: code:addons/crm/static/src/js/web_planner_crm.js:34
+#, python-format
+msgid "Negotiation"
+msgstr "Görüşme"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:23
+#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#: code:addons/crm/static/src/js/web_planner_crm.js:34
 #: model:crm.stage,name:crm.stage_lead1
+#, python-format
 msgid "New"
 msgstr "Yeni"
 
@@ -3059,6 +3052,13 @@ msgstr "Yeni"
 #: model:ir.actions.act_window,name:crm.action_opportunity_form
 msgid "New Opportunity"
 msgstr "Yeni Fırsat"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:17
+#, python-format
+msgid "New propspect assigned to the right salesperson"
+msgstr "Doğru satış personeline atanan yeni aday"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_date_action_next
@@ -3124,7 +3124,7 @@ msgstr "Planlanan sonraki aktivite yok"
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "No salesperson"
-msgstr "Satış Temsilcisi yok"
+msgstr "Satış Personeli Yok"
 
 #. module: crm
 #: selection:crm.lead,priority:0 selection:crm.opportunity.report,priority:0
@@ -3177,6 +3177,8 @@ msgid ""
 "Number of days before executing the action, allowing you to plan the date of"
 " the action."
 msgstr ""
+"Eylemi gerçekleştirmeden önceki gün sayısı, eylemin tarihini planlamanıza "
+"olanak tanır."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3197,6 +3199,8 @@ msgid ""
 "Odoo helps you keep track of your sales pipeline to follow\n"
 "                    up potential sales and better forecast your future revenues."
 msgstr ""
+"Odoo, potansiyel satışları takip etmek ve gelecekteki gelirlerinizi daha iyi"
+" tahmin etmek için satışlarınızı takip etmenize yardımcı olur."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3204,11 +3208,14 @@ msgid ""
 "Odoo is the world's only software to have a full integration of Marketing "
 "Apps for your sales channel: insight sales, point of sale, ecommerce."
 msgstr ""
+"Odoo, satış kanalınız için Pazarlama Uygulamaları, içgörü satışları, satış "
+"noktası, e-ticaret, ile tam entegrasyona sahip olduğu dünyadaki tek "
+"yazılımdır."
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_sale_config_settings_generate_sales_team_alias
 msgid "Odoo will generate an email alias based on the sales team name"
-msgstr ""
+msgstr "Odoo, satış ekibi adına dayalı e-posta takma adı üretecektir"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3217,6 +3224,8 @@ msgid ""
 "                        Tell us how you sell and we will tell you what\n"
 "                        configuration will best fit your quotation process."
 msgstr ""
+"Odoo, dakikalar içinde özenilmiş profesyonel teklifler ve sözleşmeler oluşturmanıza yardımcı olacaktır.\n"
+"Bize nasıl satış yaptığınızı söyleyin; size hangi yapılandırmanın sürecinize en iyi uyacağını söyleyelim."
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_case_form_view_salesteams_lead
@@ -3225,6 +3234,8 @@ msgid ""
 "Once qualified, the lead can be converted into a business\n"
 "                    opportunity and/or a new customer in your address book."
 msgstr ""
+"Nitelikli bir lider, adres defterinizdeki fırsat veya yeni müşteriyi\n"
+"bir işe dönüştürebilir."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3234,11 +3245,15 @@ msgid ""
 "weekly sales meeting with the team during which you will do a pipeline "
 "review."
 msgstr ""
+"CRM'inizi dağıttıktan sonra, şimdi gelirlerinizi büyütmenin zamanı geldi. "
+"Sürekli bir iyileştirme yaklaşımı oluşturarak başlayın. Boru hattı "
+"incelemesini yapacağınız ekiple haftalık satış toplantısı düzenlemenizi "
+"öneririz."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Online users: we do it for you!"
-msgstr ""
+msgstr "Çevrimiçi kullanıcılar: sizin için yapıyoruz!"
 
 #. module: crm
 #: code:addons/crm/wizard/base_partner_merge.py:323
@@ -3387,9 +3402,19 @@ msgid "Options"
 msgstr "Seçenekler"
 
 #. module: crm
+#: model:crm.lead.tag,name:crm.categ_oppor8
+msgid "Other"
+msgstr "Diğer"
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Overdue Activities"
 msgstr "Zamanı geçen Faaliyetler"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid "Overdue Opportunities"
+msgstr "Geciken Fırsatlar"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_delay_expected
@@ -3400,6 +3425,20 @@ msgstr "Zaman Sınırını Aşan"
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_user_id
 msgid "Owner"
 msgstr "Sahibi"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#, python-format
+msgid "POC Sold"
+msgstr "POC Satıldı"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:32
+#, python-format
+msgid "POC demonstration to the customer"
+msgstr "POC müşteriye sunuldu"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_parent_id
@@ -3428,6 +3467,9 @@ msgid ""
 " necessarily the model given by alias_model_id (example: project "
 "(parent_model) and task (model))"
 msgstr ""
+"Takma adın bulunduğu üst model. Takma referansın bulunduğu model zorunlu "
+"olarak alias_model_id tarafından verilen model değildir.  (örnek: project "
+"(parent_model) ve görev (model))"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_activity_parent_id
@@ -3436,6 +3478,9 @@ msgid ""
 " named. For example on a project, the parent_id of project subtypes refers "
 "to task-related subtypes."
 msgstr ""
+"Otomatik abonelik için kullanılan alt alt türü. Bu alan doğru bir şekilde "
+"adlandırılmamış. Örneğin, bir projede, proje alt türlerinin parent_id'i, "
+"görevle ilgili alt türlere başvurur."
 
 #. module: crm
 #: model:ir.model,name:crm.model_res_partner
@@ -3470,6 +3515,13 @@ msgid "Phone"
 msgstr "Telefon"
 
 #. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:24
+#, python-format
+msgid "Phone call with following questions: ..."
+msgstr "Aşağıdaki soruları içeren telefon görüşmesi yapın: ..."
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Phone scripts"
 msgstr "Arama hazır konuşmaları"
@@ -3499,7 +3551,7 @@ msgid ""
 "missed deadlines or the number of interactions per opportunity. This report is\n"
 "mainly used by the sales manager in order to do the periodic review with the\n"
 "teams of the sales pipeline."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_opportunity_report_action_graph
@@ -3515,6 +3567,8 @@ msgstr ""
 #: model:web.planner,tooltip_planner:crm.planner_crm
 msgid "Plan your sales strategy: objectives, leads, KPIs, and much more!"
 msgstr ""
+"Satış stratejinizi planlayın: hedefler, potansiyel/hedef müşteriler, KPI'lar"
+" ve daha pek çok şey!"
 
 #. module: crm
 #: model:ir.model,name:crm.model_web_planner
@@ -3565,7 +3619,7 @@ msgstr "Öncelik"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_stage_legend_priority
 msgid "Priority Management Explanation"
-msgstr ""
+msgstr "Öncelik Yönetimi Açıklaması"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_probability
@@ -3582,7 +3636,19 @@ msgstr "Olasılık (%)"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_expected_revenue
 msgid "Probable Turnover"
-msgstr ""
+msgstr "Muhtemel Ciro"
+
+#. module: crm
+#: model:crm.lead.tag,name:crm.categ_oppor1
+msgid "Product"
+msgstr "Ürün"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:23
+#, python-format
+msgid "Product Demonstration"
+msgstr "Ürün Tanıtımı"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3590,29 +3656,70 @@ msgid "Products"
 msgstr "Ürünler"
 
 #. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:16
+#: code:addons/crm/static/src/js/web_planner_crm.js:23
+#: code:addons/crm/static/src/js/web_planner_crm.js:28
 #: model:ir.ui.view,arch_db:crm.crm_planner
+#, python-format
 msgid "Proposal"
 msgstr "Teklif"
 
 #. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:34
 #: model:crm.stage,name:crm.stage_lead3
+#, python-format
 msgid "Proposition"
-msgstr "Önerme"
+msgstr "Teklif"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Qualification form (you can use the survey app for this)"
-msgstr ""
+msgstr "Kalifikasyon formu (bunun için anket uygulamasını kullanabilirsiniz)"
 
 #. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#: code:addons/crm/static/src/js/web_planner_crm.js:34
 #: model:crm.stage,name:crm.stage_lead2
+#, python-format
 msgid "Qualified"
-msgstr "İş Çıkabilir"
+msgstr "Değerlendirme"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#, python-format
+msgid "Qualified Sponsor"
+msgstr "Kalifiye Sponsor"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:26
+#, python-format
+msgid "Quotation sent"
+msgstr "Teklif gönderildi"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:20
+#, python-format
+msgid "Quotation sent to customer"
+msgstr "Teklif müşteriye gönderildi"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:21
+#, python-format
+msgid "Quotation signed by the customer"
+msgstr "Teklif müşteri tarafından imzalanmıştır."
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_priority
 msgid "Rating"
-msgstr "Derecelendirme"
+msgstr "Öncelik"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3763,6 +3870,8 @@ msgstr "Satış Personeli"
 msgid ""
 "Save filters or add any report to your dashboard with the Favorites menu."
 msgstr ""
+"Sık Kullanılanlar menüsüyle filtreleri kaydedin veya gösterge tablonuza "
+"herhangi bir rapor ekleyin."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_activity_log_view_form_schedule
@@ -3816,7 +3925,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Select your pricing preference and allow discounts"
-msgstr ""
+msgstr "Fiyatlandırma tercihinizi seçin ve indirime izin verin"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
@@ -3826,6 +3935,8 @@ msgid ""
 "                                will be redirected to the destination contact.\n"
 "                                You can remove contacts from this list to avoid merging them."
 msgstr ""
+"Seçilen kişiler bir araya getirilecek. \n"
+"Bu kişilerden birine bağlı tüm belgeler, hedef kişiye yönlendirilir. Birleşmelerden kaçınmak için kişileri bu listeden kaldırabilirsiniz."
 
 #. module: crm
 #: selection:base.partner.merge.automatic.wizard,state:0
@@ -3844,12 +3955,28 @@ msgid ""
 "Send an email to all opportunities in the \"Qualified\" stage for more than "
 "20 days"
 msgstr ""
+"20 günden fazla \"Kalifiye\" aşamasında olan tüm fırsatlara bir e-posta "
+"gönderin"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_sequence
 #: model:ir.model.fields,field_description:crm.field_crm_stage_sequence
 msgid "Sequence"
 msgstr "Sıra"
+
+#. module: crm
+#: model:crm.lead.tag,name:crm.categ_oppor3
+msgid "Services"
+msgstr "Hizmetler"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:18
+#: code:addons/crm/static/src/js/web_planner_crm.js:29
+#, python-format
+msgid "Set fields: Expected Revenue, Expected Closing Date, Next Action"
+msgstr ""
+"Alanları ayarlayın: Beklenen Gelir, Beklenen Kapanış Tarihi, Sonraki Eylem"
 
 #. module: crm
 #: model:ir.actions.server,name:crm.action_set_team_sales_department
@@ -3860,6 +3987,8 @@ msgstr "Ekibi Satış Bölümüne ayarla"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Set the sales manager as a follower of every opportunity above $20k"
 msgstr ""
+"20.000 ABD Doları'nın üstünde olan her fırsata Satış Yöneticisini bir "
+"takipçi olarak ayarlayın"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_stage_on_change
@@ -3876,7 +4005,7 @@ msgid ""
 "                      significant boost, we will help you get the most out of\n"
 "                      Odoo CRM to transform how your salespeople work.\n"
 "                      That's the purpose of this guide."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_sale_config_settings
@@ -3894,11 +4023,21 @@ msgid ""
 "Show advanced filters and options by clicking on the magnifying glass icon "
 "next to the search bar."
 msgstr ""
+"Arama çubuğunun yanındaki büyüteç simgesini tıklayarak gelişmiş filtreleri "
+"ve seçenekleri gösterin."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Show all opportunities for which the next action date is before today"
 msgstr ""
+"Bir sonraki etkinlik tarihinin bugün öncesi olduğu tüm fırsatları gösterin"
+
+#. module: crm
+#: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
+msgid ""
+"Show all opportunities with a deadline for which the next action date is "
+"before today"
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
@@ -3923,6 +4062,11 @@ msgid "Slides"
 msgstr "Slaytlar"
 
 #. module: crm
+#: model:crm.lead.tag,name:crm.categ_oppor2
+msgid "Software"
+msgstr "Yazılım"
+
+#. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Solution Selling"
 msgstr "Çözüm Satışı"
@@ -3932,7 +4076,7 @@ msgstr "Çözüm Satışı"
 msgid ""
 "Some examples of lost reasons: \"We don't have people/skill\", \"Price too "
 "high\""
-msgstr ""
+msgstr "Bazı kaybetme nedeni örnekleri: \"Yetkinliğimiz yok\", \"Fiyat çok yüksek\""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_source_id
@@ -4000,6 +4144,8 @@ msgid ""
 "Stages allow salespersons to easily track how a specific opportunity\n"
 "            is positioned in the sales cycle."
 msgstr ""
+"Aşamalar, satış personellerinin satış döngüsünde belirli bir fırsatın nasıl "
+"konumlandığını kolayca izlemelerine olanak tanır."
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_state
@@ -4054,6 +4200,9 @@ msgid ""
 "                        between good and great salespeople! Setup a pipeline\n"
 "                        that is in line with your sales cycle."
 msgstr ""
+"İyi ve büyük satış görevlileri arasında fark yaratan\n"
+"sistematik organizasyon! Satış döngüsü ile uyumlu\n"
+"hat kurun."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
@@ -4095,7 +4244,21 @@ msgstr "Eposta Şablonları"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Templates of quotations (use Odoo Online Proposals for this)"
-msgstr ""
+msgstr "Tekliflerin şablonları (bunun için Odoo Online Tekliflerini kullanın)"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:15
+#, python-format
+msgid "Territory"
+msgstr "Bölge"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:20
+#, python-format
+msgid "The customer came back to you to discuss your quotation"
+msgstr "Müşteri, teklifinizi görüşmek için size geri geldi."
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_alias_id
@@ -4120,7 +4283,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "The first stage is usually \"New\" and the last one is \"Won\""
-msgstr ""
+msgstr "İlk aşama genellikle \"Yeni\" sonuncu aşama ise \"Kazanıldı\" dır."
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_alias_model_id
@@ -4167,7 +4330,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "The point of contact <strong>for all your prospects</strong>"
-msgstr ""
+msgstr "Tüm <strong>potansiyel müşterileriniz</strong> için iletişim noktası"
 
 #. module: crm
 #: sql_constraint:crm.lead:0
@@ -4181,13 +4344,15 @@ msgid ""
 "                        <strong>methodical organization</strong>, <strong>trainings</strong> and\n"
 "                        <strong>good sales tools</strong>."
 msgstr ""
+"Bir satış ekibi geliştirmek için üç temel pratik yöntem; <strong>düzenli organizasyon</strong>, <strong>eğitimler</strong>\n"
+"ve <strong>iyi satış araçlarıdır.</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "The whole process may take a few hours. But it's worth doing\n"
 "                      it."
-msgstr ""
+msgstr "Bütün bu işlem birkaç saat sürebilir. Ancak yapmaya değiyor."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4230,11 +4395,13 @@ msgid ""
 "This email address has been preconfigured as the default\n"
 "                                    for your sales department.<br/>"
 msgstr ""
+"Bu e-posta adresi, satış departmanınız için  varsayılan olarak önceden "
+"yapılandırılmıştır.<br/>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "This is the default configuration, there is nothing to setup."
-msgstr ""
+msgstr "Bu varsayılan bir yapılandırmadır, kurulacak hiçbir şey yoktur."
 
 #. module: crm
 #. openerp-web
@@ -4244,6 +4411,7 @@ msgid ""
 "This opportunity has <b>no next activity scheduled</b>. <i>Click to set "
 "one.</i>"
 msgstr ""
+"Bu fırsatın <b>planlanan etkinliği</b> yok. <i>Ayarlamak için tıklayın.</i>"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_stage_probability
@@ -4256,10 +4424,8 @@ msgstr ""
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_opportunity_report_action_lead
-msgid ""
-"This report analyses the source of your leads\n"
-"(including those converted into opportunities)."
-msgstr ""
+msgid "This report analyses the source of your leads."
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_stage_fold
@@ -4267,6 +4433,8 @@ msgid ""
 "This stage is folded in the kanban view when there are no records in that "
 "stage to display."
 msgstr ""
+"Bu aşamada gösterilecek kayıt kalmadığında kanban görünümünde katlanmış "
+"aşamadır."
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:1010
@@ -4298,11 +4466,14 @@ msgid ""
 "applied to it. This is settable in the pricelist configuration if you allow "
 "discounts."
 msgstr ""
+"Müşterilerinizi teşvik etmek için onlara kamu fiyatını ve ona uygulanan "
+"indirimi gösterin. İndirime izin verirseniz, fiyat listesi yapılandırmasında"
+" ayarlanabilir."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Today Activities"
-msgstr "Bugunkü Etkinlikler"
+msgstr "Bu Gunkü Etkinlikler"
 
 #. module: crm
 #: model:crm.lost.reason,name:crm.lost_reason_1
@@ -4318,6 +4489,11 @@ msgstr "Toplam Gelir"
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
 msgid "Tracking"
 msgstr "İzleme"
+
+#. module: crm
+#: model:crm.lead.tag,name:crm.categ_oppor6
+msgid "Training"
+msgstr "Eğitim"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report_lead_type
@@ -4355,6 +4531,8 @@ msgid ""
 "Unless you are starting a new business, you probably have a list of "
 "customers and vendors you'd like to import."
 msgstr ""
+"Eğer yeni bir işe başlamazsanız, muhtemelen ithalat yapmak istediğiniz "
+"müşterilerin ve sağlayıcıların bir listesi muhtemelen vardır."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
@@ -4371,7 +4549,7 @@ msgstr "Güncelleme Tarihi"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Upsell more to existing customers"
-msgstr ""
+msgstr "Varolan müşterilere daha fazla satış yapın"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4391,7 +4569,7 @@ msgid ""
 "                    opportunity or a customer. It can be a business card you received,\n"
 "                    a contact form filled in your website, or a file of unqualified\n"
 "                    prospects you import, etc."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: selection:sale.config.settings,group_use_lead:0
@@ -4399,11 +4577,14 @@ msgid ""
 "Use leads if you need a qualification step before creating an opportunity or"
 " a customer"
 msgstr ""
+"Bir fırsat veya müşteri oluşturmadan önce bir yeterlik adımına ihtiyacınız "
+"varsa adayları kullanın"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_lost_reason_action
 msgid "Use lost reasons to explain why an opportunity is lost."
 msgstr ""
+"Bir fırsatın neden kaybolduğunu açıklamak için kayıp sebepleri kullanın."
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.relate_partner_opportunities
@@ -4411,11 +4592,14 @@ msgid ""
 "Use opportunities to keep track of your sales pipeline, follow\n"
 "                up potential sales and better forecast your future revenues."
 msgstr ""
+"Satış hattınızı takip etmek için fırsatları kullanın, takip edin.\n"
+"Potansiyel satışlarınızı artırın ve gelecekteki gelirlerinizi daha iyi tahmin edin."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Use our import templates to get your catalog ready in no time!"
 msgstr ""
+"Kataloğunuzu hemen hazır hale getirmek için ithalat şablonlarımızı kullanın!"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4424,21 +4608,21 @@ msgid ""
 "                                            Examples of subscription may include:\n"
 "                                            annual support contract, monthly\n"
 "                                            subscription to a service, etc."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #. openerp-web
 #: code:addons/crm/static/src/js/tour.js:84
 #, python-format
 msgid "Use the <b>implementation guide</b> to setup the CRM in your company."
-msgstr ""
+msgstr "Şirketinizde CRM'i kurmak için <b>uygulama kılavuzunu</b> kullanın."
 
 #. module: crm
 #. openerp-web
 #: code:addons/crm/static/src/js/tour.js:66
 #, python-format
 msgid "Use the breadcrumbs to <b>go back to your sales pipeline</b>."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_team_resource_calendar_id
@@ -4483,7 +4667,7 @@ msgstr "KDV"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "VIP letter to potential sponsors"
-msgstr ""
+msgstr "Potansiyel sponsorlara Özel mektup"
 
 #. module: crm
 #: selection:crm.lead,priority:0 selection:crm.opportunity.report,priority:0
@@ -4506,16 +4690,19 @@ msgid ""
 "We are here to help you. If you get stuck, do not hesitate to\n"
 "                      reach our"
 msgstr ""
+"Size yardım etmek için buradayız. Sıkışırsanız, bizimle iletişime geçmekten "
+"çekinmeyin"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "We can add fields related to your business on any screen, for example"
 msgstr ""
+"Herhangi bir ekranda işletmenizle alakalı alanları ekleyebiliriz, örneğin"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "We can automate steps in your workflow, for example:"
-msgstr ""
+msgstr "İş akışınızdaki adımları otomatikleştirebiliriz, örneğin:"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4525,6 +4712,8 @@ msgid ""
 "                                        manager a CSV file containing all your\n"
 "                                        data."
 msgstr ""
+"Bütün içe aktarma işleminizi sizin yerinize halledebiliriz: Odoo proje "
+"yöneticinize tüm verilerinizi içeren bir CSV dosyası göndermeniz yeterlidir"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4532,6 +4721,8 @@ msgid ""
 "We can implement custom reports for you based on your Word templates, for "
 "example:"
 msgstr ""
+"Word şablonlarınızı esas alarak sizin için özel raporlar uygulayabiliriz, "
+"örneğin:"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4539,17 +4730,17 @@ msgid ""
 "We designed Odoo to help you grow your business. Odoo CRM\n"
 "                      is not just a tool, we want it to have a major impact on your\n"
 "                      sales performance. That's our mission, and we are serious about it."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:crm.lost.reason,name:crm.lost_reason_2
 msgid "We don't have people/skills"
-msgstr ""
+msgstr "Yetkinliğimiz yok"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "We hope this process helped you bring your sales vision to life."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4567,12 +4758,13 @@ msgid ""
 "What <strong>kind of proposals</strong> do you usually send to your "
 "customers ?"
 msgstr ""
+"Müşterilerinize genellikle <strong>ne tür teklifler</strong> gönderirsiniz?"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "What are the main KPIs you need to track for your the sales activities?"
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4581,6 +4773,8 @@ msgid ""
 "                        dealing with? Being clear on your expectations is the first step\n"
 "                        of a successful implementation."
 msgstr ""
+"Satış hedefleriniz neler? Hangi zorluklar ile uğraşıyorsunuz? "
+"Beklentileriniz konusunda açık olmak başarılı bir uygulamanın ilk adımıdır."
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_team_id
@@ -4600,7 +4794,12 @@ msgid "Wizard"
 msgstr "Sihirbaz"
 
 #. module: crm
+#. openerp-web
 #: code:addons/crm/models/crm_lead.py:1043
+#: code:addons/crm/static/src/js/web_planner_crm.js:16
+#: code:addons/crm/static/src/js/web_planner_crm.js:23
+#: code:addons/crm/static/src/js/web_planner_crm.js:28
+#: code:addons/crm/static/src/js/web_planner_crm.js:34
 #: model:crm.stage,name:crm.stage_lead4
 #: model:ir.ui.view,arch_db:crm.crm_activity_report_view_search
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -4609,7 +4808,7 @@ msgstr "Sihirbaz"
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 #, python-format
 msgid "Won"
-msgstr "Kazanılan"
+msgstr "Kazanıldı"
 
 #. module: crm
 #: model:ir.filters,name:crm.filter_opportunity_country
@@ -4619,12 +4818,21 @@ msgstr "Ülkeye Göre Kazanma"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_res_users_target_sales_won
 msgid "Won in Opportunities Target"
-msgstr "Fırsat Hedefinde Kazanma"
+msgstr "Fırsat Kazanma Hedefi"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_resource_calendar_id
 msgid "Working Time"
 msgstr "Çalışma Süresi"
+
+#. module: crm
+#. openerp-web
+#: code:addons/crm/static/src/js/web_planner_crm.js:19
+#, python-format
+msgid ""
+"You are in discussion with the decision maker and HE agreed on his pain "
+"points"
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: code:addons/crm/wizard/base_partner_merge.py:306
@@ -4639,7 +4847,7 @@ msgid ""
 "                            practice to do it at least once a month. Ask your team to set tags on opportunities to\n"
 "                            identify why they were lost and use this information to generate statistics. Here are\n"
 "                            some examples of tags to create: no budget, competition, no pain found, etc."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: code:addons/crm/wizard/base_partner_merge.py:398
@@ -4653,7 +4861,7 @@ msgid ""
 "You will be able to plan meetings and log activities from\n"
 "                    opportunities, convert them into quotations, attach related\n"
 "                    documents, track all discussions, and much more."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.relate_partner_opportunities
@@ -4662,6 +4870,9 @@ msgid ""
 "                opportunities, convert them into quotations, attach related\n"
 "                documents, track all discussions, and much more."
 msgstr ""
+"Toplantılar planlayabilir ve fırsatlardan aktiviteler \n"
+"kaydedebilir, teklifleri değiştirebilir, ilgili belgeleri iliştirebilir,\n"
+"tüm tartışmaları takip edebilir ve çok daha fazlasını yapabilirsiniz."
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_lead_opportunities
@@ -4671,6 +4882,9 @@ msgid ""
 "                    opportunities, convert them into quotations, attach related\n"
 "                    documents, track all discussions, and much more."
 msgstr ""
+"Fırsatlardan toplantılar ve telefon görüşmeleri planlayabilir, \n"
+"teklifleri değiştirebilir, ilgili belgeleri iliştirebilir, tüm tartışmaları\n"
+"izleyebilir ve çok daha fazlasını yapabilirsiniz."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -4815,31 +5029,31 @@ msgstr "müşteri listesi"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "to create internal challenge for your salesmen"
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "to create tests and certifications."
-msgstr ""
+msgstr "Testler ve sertifikalar oluştur"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "to describe<br/> your experience or to suggest improvements!"
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "to organize all your documents like: customer presentations, product sheets,"
 " comparisons with competitors, pain points sheets, training materials, etc."
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid ""
 "to setup your own domain\n"
 "                                 name (e.g. sales@yourcompany.com)"
-msgstr ""
+msgstr "UNTRANSLATED"
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:877
@@ -4850,9 +5064,9 @@ msgstr "bilinmeyen"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "use Odoo API to import through scripts"
-msgstr ""
+msgstr "use Odoo API to import through scripts"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "with your work above"
-msgstr ""
+msgstr "yukarıdaki çalışmanız ile"

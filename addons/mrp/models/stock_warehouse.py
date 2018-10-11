@@ -29,12 +29,12 @@ class StockWarehouse(models.Model):
         return result
 
     def _get_manufacture_route_id(self):
-        manufacture_route_id = self.env.ref('mrp.route_warehouse0_manufacture').id
-        if not manufacture_route_id:
-            manufacture_route_id = self.env['stock.location.route'].search([('name', 'like', _('Manufacture'))], limit=1).id
-        if not manufacture_route_id:
+        manufacture_route = self.env.ref('mrp.route_warehouse0_manufacture', raise_if_not_found=False)
+        if not manufacture_route:
+            manufacture_route = self.env['stock.location.route'].search([('name', 'like', _('Manufacture'))], limit=1)
+        if not manufacture_route:
             raise exceptions.UserError(_('Can\'t find any generic Manufacture route.'))
-        return manufacture_route_id
+        return manufacture_route.id
 
     def _get_manufacture_pull_rules_values(self, route_values):
         if not self.manu_type_id:
@@ -118,10 +118,10 @@ class StockWarehouse(models.Model):
         return routes
 
     @api.multi
-    def _update_name_and_code(self, name, code):
+    def _update_name_and_code(self, name=False, code=False):
         res = super(StockWarehouse, self)._update_name_and_code(name, code)
         # change the manufacture procurement rule name
         for warehouse in self:
-            if warehouse.manufacture_pull_id:
+            if warehouse.manufacture_pull_id and name:
                 warehouse.manufacture_pull_id.write({'name': warehouse.manufacture_pull_id.name.replace(warehouse.name, name, 1)})
         return res

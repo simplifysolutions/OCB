@@ -3,24 +3,30 @@
 # * project
 # 
 # Translators:
-# Martin Trigaux <mat@odoo.com>, 2016
+# Martin Trigaux, 2016
 # Simone Bernini <simone@aperturelabs.it>, 2016
 # Giacomo Grasso <giacomo.grasso.82@gmail.com>, 2016
 # Francesco Garganese <francesco.garganese@aeromnia.aero>, 2016
 # Alberto Vincenzi <alberto.vincenzi@gmail.com>, 2016
-# Marius Marolla <mariusmarolla@gmail.com>, 2016
-# Paolo Valier <paolo.valier@hotmail.it>, 2016
+# Paolo Valier, 2016
+# Marius Marolla <mariusmarolla@entersys.it>, 2016
 # p_amoruso <p.amoruso@elvenstudio.it>, 2016
 # Christian <chris@effeci.info>, 2016
 # Giuseppe Castellani <giuseppecastellani@gmail.com>, 2016
 # Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
+# Giovanni Perteghella <giovanni@perteghella.org>, 2016
+# Andrea Piovesana <andrea.m.piovesana@gmail.com>, 2017
+# Luigi Di Naro <gigidn@gmail.com>, 2018
+# David Minneci <david@numeko.it>, 2018
+# Sebastiano Pistore <SebastianoPistore.info@protonmail.ch>, 2018
+# Léonie Bouchat <lbo@odoo.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-10 08:42+0000\n"
-"PO-Revision-Date: 2016-10-10 08:42+0000\n"
-"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>, 2016\n"
+"POT-Creation-Date: 2017-06-23 13:26+0000\n"
+"PO-Revision-Date: 2017-06-23 13:26+0000\n"
+"Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,11 +119,10 @@ msgid ""
 "                                <span style=\"font-style:italic;\">You’re not alone</span>\n"
 "                            </p>\n"
 "                            <p dir=\"ltr\" style=\"font-size:13px;margin-top:0pt;margin-bottom:8pt;\">\n"
-"                                <span>We would be delighted to assist you along the way. Contact us at \n"
-"                                <a href=\"mailto:help@odoo.com\"><span style=\"text-decoration:underline;\">\n"
-"                                help@odoo.com</span></a> if you have any question. You can also discover \n"
-"                                how to get the best out of Odoo Project with our </span>\n"
-"                                <a href=\"https://www.odoo.com/documentation/user/9.0/project.html\">\n"
+"                                <span>We would be delighted to assist you along the way. Contact us through our\n"
+"                                <a href=\"https://www.odoo.com/help\">support form</a> if you have any question.\n"
+"                                You can also discover how to get the best out of Odoo Project with our </span>\n"
+"                                <a href=\"https://www.odoo.com/documentation/user/10.0/project.html\">\n"
 "                                <span style=\"text-decoration:underline;\">User Documentation</span></a>\n"
 "                                </span><span> or with our </span>\n"
 "                                <a href=\"https://www.odoo.com/documentation\">\n"
@@ -158,17 +163,18 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_report_project_task_user_delay_endings_days
 msgid "# Days to Deadline"
-msgstr ""
+msgstr "# Giorni alla Scadenza"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_res_partner_task_count
+#: model:ir.model.fields,field_description:project.field_res_users_task_count
 msgid "# Tasks"
 msgstr "# Attività"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_report_project_task_user_no_of_days
 msgid "# Working Days"
-msgstr ""
+msgstr "# giorni lavorativi"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_report_project_task_user_nbr
@@ -237,6 +243,8 @@ msgstr ""
 msgid ""
 "<b>Invite coworkers</b> via email.<br/><i>Enter one email per line.</i>"
 msgstr ""
+"<b>Invita collaboratori</b> via email.<br/><i>Inserisci una mail per "
+"riga.</i>"
 
 #. module: project
 #. openerp-web
@@ -446,6 +454,8 @@ msgid ""
 "<span>(*) This configuration is related to the company you're logged "
 "into.</span>"
 msgstr ""
+"<span>(*) Questa configurazione è collegata all'azienda con cui vi siete "
+"connessi.</span>"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -576,7 +586,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "<strong>Billing</strong>"
-msgstr ""
+msgstr "<strong>Fatturazione</strong>"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -619,7 +629,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "<strong>Example: </strong>"
-msgstr ""
+msgstr "<strong>Esempio: </strong>"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -730,7 +740,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "<strong>Notes</strong>"
-msgstr ""
+msgstr "<strong>Note</strong>"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -879,7 +889,7 @@ msgstr "Accetta mail da"
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Account Preferences"
-msgstr ""
+msgstr "Preferenze account"
 
 #. module: project
 #. openerp-web
@@ -900,13 +910,18 @@ msgstr ""
 #. module: project
 #: model:ir.actions.server,name:project.activate_sample_project
 msgid "Activate Sample Project"
-msgstr ""
+msgstr "Attiva progetto di esempio"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_active
 #: model:ir.model.fields,field_description:project.field_project_task_active
 msgid "Active"
 msgstr "Attivo"
+
+#. module: project
+#: model:ir.ui.view,arch_db:project.project_planner
+msgid "Activities"
+msgstr "Attività"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.task_type_edit
@@ -925,7 +940,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_project_kanban
 msgid "Add/remove from favorite"
-msgstr ""
+msgstr "Aggiungi/rimuovi dai preferiti"
 
 #. module: project
 #. openerp-web
@@ -1086,7 +1101,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Available on the Apple Store"
-msgstr ""
+msgstr "Disponibile negli Apple Store"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -1298,7 +1313,7 @@ msgstr "Configurazione"
 #: code:addons/project/static/src/js/tour.js:93
 #, python-format
 msgid "Configuration options are available in the Settings app."
-msgstr ""
+msgstr "Le opzioni di configurazione sono disponibili nel settings delle app."
 
 #. module: project
 #: model:ir.actions.act_window,name:project.action_config_settings
@@ -1359,7 +1374,7 @@ msgstr "Crea un grafico Gantt con le attività del tuo progetto e deadline"
 #. module: project
 #: model:ir.actions.act_window,name:project.open_create_project
 msgid "Create a Project"
-msgstr ""
+msgstr "Crea un Progetto"
 
 #. module: project
 #: model:ir.actions.act_window,help:project.open_view_project_all_config
@@ -1802,7 +1817,7 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_type_fold
 msgid "Folded in Kanban"
-msgstr ""
+msgstr "Chiuso nella vista Kanban"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.edit_project
@@ -1874,7 +1889,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Get it on Google Play"
-msgstr ""
+msgstr "Scaricalo da Google Play"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2248,7 +2263,7 @@ msgstr "Ultima modifica il"
 #: model:ir.model.fields,field_description:project.field_project_task_date_last_stage_update
 #: model:ir.model.fields,field_description:project.field_report_project_task_user_date_last_stage_update
 msgid "Last Stage Update"
-msgstr "Ultimo stage aggiornato"
+msgstr "Ultimo Aggiornamento Stadio"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_config_settings_write_uid
@@ -2368,7 +2383,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_project_project_filter
 msgid "My Favorites"
-msgstr ""
+msgstr "I miei Preferiti"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_task_search_form
@@ -2419,12 +2434,12 @@ msgstr "Nuova attività"
 #: code:addons/project/static/src/js/web_planner_project.js:86
 #, python-format
 msgid "New repair added"
-msgstr ""
+msgstr "Nuova riparazione aggiunta"
 
 #. module: project
 #: selection:project.config.settings,module_rating_project:0
 msgid "No customer rating"
-msgstr ""
+msgstr "Nessuna Valutazione cliente"
 
 #. module: project
 #: selection:project.task,priority:0
@@ -2441,7 +2456,7 @@ msgstr "Normale"
 #: model:project.task,legend_blocked:project.project_task_9
 #: model:project.task.type,legend_blocked:project.project_stage_0
 msgid "Not validated"
-msgstr ""
+msgstr "Non convalidato"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_notes
@@ -2474,6 +2489,11 @@ msgstr "Numero di giorni per chiudere l'attività"
 #: model:ir.model.fields,field_description:project.field_project_project_doc_count
 msgid "Number of documents attached"
 msgstr "Numero di documenti allegati"
+
+#. module: project
+#: model:ir.ui.view,arch_db:project.project_planner
+msgid "Objectives"
+msgstr "Obiettivi"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2645,6 +2665,10 @@ msgid ""
 "- partners: only authenticated partners\n"
 "- followers: only followers of the related document or members of following channels\n"
 msgstr ""
+"Politica per pubblicare un messaggio sul documento utilizzando il mail gateway.\n"
+"- tutti: tutti possono postare\n"
+"- partner: solo partner autenticati\n"
+"- follower: solo follower del documento correlato o membri dei seguenti canali\n"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2670,7 +2694,7 @@ msgstr "Privacy"
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Product or software version"
-msgstr ""
+msgstr "Versione del software o del prodotto"
 
 #. module: project
 #: model:ir.model,name:project.model_project_project
@@ -2726,7 +2750,7 @@ msgstr "Impostazioni Progetto"
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Project Settings."
-msgstr ""
+msgstr "Impostazioni progetto."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_project_task_graph
@@ -2757,6 +2781,7 @@ msgstr "Attività di Progetto"
 #: model:ir.model.fields,field_description:project.field_project_task_type_project_ids
 #: model:ir.ui.menu,name:project.menu_projects_config
 #: model:ir.ui.view,arch_db:project.analytic_account_inherited_form
+#: model:ir.ui.view,arch_db:project.project_planner
 #: model:ir.ui.view,arch_db:project.view_project
 msgid "Projects"
 msgstr "Progetti"
@@ -2764,7 +2789,7 @@ msgstr "Progetti"
 #. module: project
 #: model:mail.channel,name:project.mail_channel_project_task
 msgid "Projects & Tasks"
-msgstr ""
+msgstr "Progetti & Attività"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_config_settings_module_rating_project
@@ -2845,7 +2870,7 @@ msgstr "Riferimento"
 #: code:addons/project/static/src/js/web_planner_project.js:51
 #, python-format
 msgid "Release"
-msgstr ""
+msgstr "Versione"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_remaining_hours
@@ -2869,14 +2894,14 @@ msgstr ""
 #: code:addons/project/static/src/js/web_planner_project.js:87
 #, python-format
 msgid "Repair has started"
-msgstr ""
+msgstr "Riparazione iniziata"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/web_planner_project.js:90
 #, python-format
 msgid "Repair is completed"
-msgstr ""
+msgstr "Riparazione completata"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -2913,7 +2938,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Scrum Methodology"
-msgstr ""
+msgstr "Metodo Scrum"
 
 #. module: project
 #: model:ir.ui.menu,name:project.menu_project_management
@@ -2978,7 +3003,7 @@ msgstr "Configurazione"
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Severity"
-msgstr ""
+msgstr "Gravità"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -3150,12 +3175,12 @@ msgstr "Modificato stadio attività"
 #: model:ir.model.fields,field_description:project.field_project_task_name
 #: model:ir.model.fields,field_description:project.field_report_project_task_user_name
 msgid "Task Title"
-msgstr ""
+msgstr "Titolo Attività"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_task_form2
 msgid "Task Title..."
-msgstr ""
+msgstr "Titolo Attività..."
 
 #. module: project
 #: model:mail.message.subtype,description:project.mt_task_blocked
@@ -3205,6 +3230,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:project.field_project_project_task_ids
 #: model:ir.model.fields,field_description:project.field_project_project_task_needaction_count
 #: model:ir.model.fields,field_description:project.field_res_partner_task_ids
+#: model:ir.model.fields,field_description:project.field_res_users_task_ids
 #: model:ir.ui.menu,name:project.menu_action_view_task
 #: model:ir.ui.view,arch_db:project.edit_project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -3373,6 +3399,8 @@ msgid ""
 "This stage is folded in the kanban view when there are no records in that "
 "stage to display."
 msgstr ""
+"Questo stage è riportato nella vista kanban quando non ci sono record in "
+"quella fase da visualizzare."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -3568,21 +3596,21 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "View statistics for the week"
-msgstr ""
+msgstr "Visualizza statistiche della settimana"
 
 #. module: project
 #: code:addons/project/models/project.py:204
 #: selection:project.project,privacy_visibility:0
 #, python-format
 msgid "Visible by all employees"
-msgstr ""
+msgstr "Visibile da tutti i dipendenti"
 
 #. module: project
 #: code:addons/project/models/project.py:205
 #: selection:project.project,privacy_visibility:0
 #, python-format
 msgid "Visible by following customers"
-msgstr ""
+msgstr "Visibile dai seguenti clienti"
 
 #. module: project
 #. openerp-web
@@ -3779,12 +3807,12 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Your Projects"
-msgstr ""
+msgstr "I tuoi Progetti"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Your Projects:"
-msgstr ""
+msgstr "I tuoi Progetti:"
 
 #. module: project
 #: model:ir.actions.act_window,help:project.open_view_project_all
@@ -3804,7 +3832,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "etc.."
-msgstr ""
+msgstr "ecc..."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner

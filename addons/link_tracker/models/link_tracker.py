@@ -10,12 +10,12 @@ from lxml import html
 from urllib2 import urlopen
 from urlparse import urljoin
 from urlparse import urlparse
-from werkzeug import url_encode
+from werkzeug import url_encode, unescape
 
 from odoo import models, fields, api, _
 from odoo.tools import ustr
 
-URL_REGEX = r'(\bhref=[\'"](?!mailto:)([^\'"]+)[\'"])'
+URL_REGEX = r'(\bhref=[\'"](?!mailto:|tel:|sms:)([^\'"]+)[\'"])'
 
 def VALIDATE_URL(url):
     if urlparse(url).scheme not in ('http', 'https', 'ftp', 'ftps'):
@@ -56,7 +56,7 @@ class link_tracker(models.Model):
             href = match[0]
             long_url = match[1]
 
-            vals['url'] = long_url
+            vals['url'] = unescape(long_url)
 
             if not blacklist or not [s for s in blacklist if s in long_url] and not long_url.startswith(short_schema):
                 link = self.create(vals)
@@ -248,19 +248,20 @@ class link_tracker_click(models.Model):
 
             vals = {
                 'link_id': code_rec.link_id.id,
-                'create_date': datetime.date.today(),
                 'ip': ip,
                 'country_id': country_record.id,
-                'mail_stat_id': stat_id
             }
 
             if stat_id:
                 mail_stat = self.env['mail.mail.statistics'].search([('id', '=', stat_id)])
+                # It could happen that the related ID is no longer available, but we still want the link to work
+                if mail_stat.exists():
+                    vals['mail_stat_id'] = stat_id
 
-                if mail_stat.mass_mailing_campaign_id:
-                    vals['mass_mailing_campaign_id'] = mail_stat.mass_mailing_campaign_id.id
+                    if mail_stat.mass_mailing_campaign_id:
+                        vals['mass_mailing_campaign_id'] = mail_stat.mass_mailing_campaign_id.id
 
-                if mail_stat.mass_mailing_id:
-                    vals['mass_mailing_id'] = mail_stat.mass_mailing_id.id
+                    if mail_stat.mass_mailing_id:
+                        vals['mass_mailing_id'] = mail_stat.mass_mailing_id.id
 
             self.create(vals)

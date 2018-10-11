@@ -42,32 +42,41 @@ class _Cleaner(clean.Cleaner):
     _style_re = re.compile('''([\w-]+)\s*:\s*((?:[^;"']|"[^"]*"|'[^']*')+)''')
 
     _style_whitelist = [
-        'font-size', 'font-family', 'background-color', 'color', 'text-align',
+        'font-size', 'font-family', 'font-weight',
+        'background-color', 'color', 'float', 'vertical-align',
+        'line-height', 'text-align', 'text-decoration',
         'padding', 'padding-top', 'padding-left', 'padding-bottom', 'padding-right',
-        'margin', 'margin-top', 'margin-left', 'margin-bottom', 'margin-right'
+        'margin', 'margin-top', 'margin-left', 'margin-bottom', 'margin-right',
         # box model
-        'border', 'border-color', 'border-radius', 'height', 'margin', 'padding', 'width', 'max-width', 'min-width',
+        'border', 'border-color', 'border-style', 'border-radius', 'border-width',
+        'height', 'margin', 'padding', 'width', 'max-width', 'min-width',
         # tables
         'border-collapse', 'border-spacing', 'caption-side', 'empty-cells', 'table-layout']
+
+    _style_whitelist.extend(
+        ['border-%s-%s' % (position, attribute)
+            for position in ['top', 'bottom', 'left', 'right']
+            for attribute in ('style', 'color', 'width', 'left-radius', 'right-radius')]
+    )
 
     strip_classes = False
     sanitize_style = False
 
     def __call__(self, doc):
         # perform quote detection before cleaning and class removal
-        for el in doc.iter():
+        for el in doc.iter(tag=etree.Element):
             self.tag_quote(el)
 
         super(_Cleaner, self).__call__(doc)
 
         # if we keep attributes but still remove classes
         if not getattr(self, 'safe_attrs_only', False) and self.strip_classes:
-            for el in doc.iter():
+            for el in doc.iter(tag=etree.Element):
                 self.strip_class(el)
 
         # if we keep style attribute, sanitize them
         if not self.style and self.sanitize_style:
-            for el in doc.iter():
+            for el in doc.iter(tag=etree.Element):
                 self.parse_style(el)
 
     def tag_quote(self, el):
@@ -145,7 +154,7 @@ class _Cleaner(clean.Cleaner):
                 if style[0].lower() in self._style_whitelist:
                     valid_styles[style[0].lower()] = style[1]
             if valid_styles:
-                el.attrib['style'] = '; '.join('%s: %s' % (key, val) for (key, val) in valid_styles.iteritems())
+                el.attrib['style'] = '; '.join('%s:%s' % (key, val) for (key, val) in valid_styles.iteritems())
             else:
                 del el.attrib['style']
 
@@ -223,6 +232,8 @@ def html_sanitize(src, silent=True, sanitize_tags=True, sanitize_attributes=Fals
         cleaned = cleaned.replace('%7C', '|')
         cleaned = cleaned.replace('&lt;%', '<%')
         cleaned = cleaned.replace('%&gt;', '%>')
+        # html considerations so real html content match database value
+        cleaned.replace(u'\xa0', '&nbsp;')
     except etree.ParserError, e:
         if 'empty' in str(e):
             return ""

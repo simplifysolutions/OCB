@@ -2,7 +2,18 @@ odoo.define('barcodes.BarcodeEvents', function(require) {
 "use strict";
 
 var core = require('web.core');
+var session = require('web.session');
 var mixins = core.mixins;
+
+
+// For IE >= 9, use this, new CustomEvent(), instead of new Event()
+function CustomEvent ( event, params ) {
+    params = params || { bubbles: false, cancelable: false, detail: undefined };
+    var evt = document.createEvent( 'CustomEvent' );
+    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+    return evt;
+   }
+CustomEvent.prototype = window.Event.prototype;
 
 var BarcodeEvents = core.Class.extend(mixins.PropertiesMixin, {
     timeout: null,
@@ -16,7 +27,7 @@ var BarcodeEvents = core.Class.extend(mixins.PropertiesMixin, {
     suffix: /[\n\r\t]+/,
     // Keys from a barcode scanner are usually processed as quick as possible,
     // but some scanners can use an intercharacter delay (we support <= 50 ms)
-    max_time_between_keys_in_ms: 55,
+    max_time_between_keys_in_ms: session.max_time_between_keys_in_ms || 55,
 
     init: function() {
         mixins.PropertiesMixin.init.call(this);
@@ -63,10 +74,16 @@ var BarcodeEvents = core.Class.extend(mixins.PropertiesMixin, {
                 // bug for the longest time that causes keyCode and
                 // charCode to not be set for events created this way:
                 // https://bugs.webkit.org/show_bug.cgi?id=16735
-                new_event = new Event("keypress", {
+                var params = {
                     'bubbles': old_event.bubbles,
                     'cancelable': old_event.cancelable,
-                });
+                };
+                try {
+                    new_event = new Event("keypress", params);
+                } catch(error) {
+                    // For IE >= 9, use new CustomEvent(), instead of new Event()
+                    new_event = new CustomEvent("keypress", params);
+                }
 
                 new_event.viewArg = old_event.viewArg;
                 new_event.ctrl = old_event.ctrl;
@@ -97,7 +114,10 @@ var BarcodeEvents = core.Class.extend(mixins.PropertiesMixin, {
         if (e.key === "ArrowLeft" || e.key === "ArrowRight" ||
             e.key === "ArrowUp" || e.key === "ArrowDown" ||
             e.key === "Escape" || e.key === "Tab" ||
-            /F\d\d?/.test(e.key)) {
+            e.key === "Backspace" || e.key === "Delete" ||
+            e.key === "Home" || e.key === "End" ||
+            e.key === "PageUp" || e.key === "PageDown" ||
+            e.key === "Unidentified" || /F\d\d?/.test(e.key)) {
             return true;
         } else {
             return false;

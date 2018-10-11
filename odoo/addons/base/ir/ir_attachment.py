@@ -10,7 +10,7 @@ import re
 from collections import defaultdict
 
 from odoo import api, fields, models, tools, SUPERUSER_ID, _
-from odoo.exceptions import AccessError
+from odoo.exceptions import AccessError, ValidationError
 from odoo.tools import config, human_size, ustr, html_escape
 from odoo.tools.mimetypes import guess_mimetype
 
@@ -26,7 +26,7 @@ class IrAttachment(models.Model):
     The computed field ``datas`` is implemented using ``_file_read``,
     ``_file_write`` and ``_file_delete``, which can be overridden to implement
     other storage engines. Such methods should check for other location pseudo
-    uri (example: hdfs://hadoppserver).
+    uri (example: hdfs://hadoopserver).
 
     The default implementation is the file:dirname location that stores files
     on the local filesystem using name based on their sha1 hash
@@ -138,8 +138,17 @@ class IrAttachment(models.Model):
         if self._storage() != 'file':
             return
 
-        # prevent all concurrent updates on ir_attachment while collecting!
+        # Continue in a new transaction. The LOCK statement below must be the
+        # first one in the current transaction, otherwise the database snapshot
+        # used by it may not contain the most recent changes made to the table
+        # ir_attachment! Indeed, if concurrent transactions create attachments,
+        # the LOCK statement will wait until those concurrent transactions end.
+        # But this transaction will not see the new attachements if it has done
+        # other requests before the LOCK (like the method _storage() above).
         cr = self._cr
+        cr.commit()
+
+        # prevent all concurrent updates on ir_attachment while collecting!
         cr.execute("LOCK ir_attachment IN SHARE MODE")
 
         # retrieve the file names from the checklist
@@ -168,6 +177,8 @@ class IrAttachment(models.Model):
             with tools.ignore(OSError):
                 os.unlink(filepath)
 
+        # commit to release the lock
+        cr.commit()
         _logger.info("filestore gc %d checked, %d removed", len(checklist), removed)
 
     @api.depends('store_fname', 'db_datas')
@@ -251,6 +262,15 @@ class IrAttachment(models.Model):
                 index_content = ustr("\n".join(words))
         return index_content
 
+    @api.model
+    def get_serving_groups(self):
+        """ An ir.attachment record may be used as a fallback in the
+        http dispatch if its type field is set to "binary" and its url
+        field is set as the request's url. Only the groups returned by
+        this method are allowed to create and write on such records.
+        """
+        return ['base.group_system']
+
     name = fields.Char('Attachment Name', required=True)
     datas_fname = fields.Char('File Name')
     description = fields.Text('Description')
@@ -285,6 +305,18 @@ class IrAttachment(models.Model):
             self._cr.execute('CREATE INDEX ir_attachment_res_idx ON ir_attachment (res_model, res_id)')
             self._cr.commit()
         return res
+
+    @api.one
+    @api.constrains('type', 'url')
+    def _check_serving_attachments(self):
+        # restrict writing on attachments that could be served by the
+        # ir.http's dispatch exception handling
+        if self.env.user._is_superuser():
+            return
+        if self.type == 'binary' and self.url:
+            has_group = self.env.user.has_group
+            if not any([has_group(g) for g in self.get_serving_groups()]):
+                raise ValidationError("Sorry, you are not allowed to write on this document")
 
     @api.model
     def check(self, mode, values=None):
@@ -374,7 +406,7 @@ class IrAttachment(models.Model):
                 continue
             # filter ids according to what access rules permit
             target_ids = list(targets)
-            allowed = self.env[res_model].search([('id', 'in', target_ids)])
+            allowed = self.env[res_model].with_context(active_test=False).search([('id', 'in', target_ids)])
             for res_id in set(target_ids).difference(allowed.ids):
                 ids.difference_update(targets[res_id])
 
